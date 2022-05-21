@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <form action="" onsubmit="event.preventDefault(), createProduct()">
+                    <div>
+                        <label for="p-name" class="form-label">Name</label>
+                        <input type="text" id="p-name" class="form-control">
+                    </div>
+                    <div>
+                        <label for="p-price" class="form-label">Price</label>
+                        <input type="number" id="p-price" class="form-control">
+                    </div>
+                    <div>
+                        <label for="img-url" class="form-label">Image URL</label>
+                        <input type="text" id="img-url" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Create Product</button>
+                </form>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <form action="" onsubmit="event.preventDefault(), updateProduct()">
+                    <div>
+                        <label for="p-name-update" class="form-label">Name</label>
+                        <input type="text" id="p-name-update" class="form-control">
+                    </div>
+                    <div>
+                        <label for="p-price-update" class="form-label">Price</label>
+                        <input type="number" id="p-price-update" class="form-control">
+                    </div>
+                    <div>
+                        <label for="img-url-update" class="form-label">Image URL</label>
+                        <input type="text" id="img-url-update" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Update Product</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div>
+            <button onclick="createProduct()">Crear Producto</button>
+        </div> -->
+        
+        
+        <div class="row" id="products-container">
+            <!-- Aquí van los productos -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/js.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/50ead72691.js" crossorigin="anonymous"></script>
+</body>
+</html>
