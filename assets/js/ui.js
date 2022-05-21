@@ -10,8 +10,8 @@ function printProducts(arrProducts) {
                             <img src="${ arrProducts[i].image }" alt="" class="product-image">
                         </div>
                         <div class="product-body text-center">
-                            <h5 class="product-name">${ arrProducts[i].name }</h5>
-                            <p class="product-price">${ arrProducts[i].price }</p>
+                            <h6 class="product-name mt-3">${ arrProducts[i].name }</h6>
+                            <h5 class="product-price">$${ arrProducts[i].price }</h5>
                         </div>
                             <div class="text-end">
                             <button class="btn btn-danger" onclick="deleteProduct(${arrProducts[i].id})">

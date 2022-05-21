@@ -29,7 +29,8 @@ function createProduct() {
     axios.post('https://e-commerce-api-academlo.herokuapp.com/api/products', newProduct)
         .then( (response) => {
             console.log(response);
-            alert('Se creo el product correctamente');
+            alert('Se creo el producto correctamente');
+            document.getElementById('create').reset();
             getProducts();
         }).catch( (error) => {
             console.log(error);
@@ -47,6 +48,7 @@ function editProduct(id) {
             document.getElementById('p-name-update').value = product.name;
             document.getElementById('p-price-update').value = product.price;
             document.getElementById('img-url-update').value = product.image;
+            document.documentElement.scrollTop = 0;
         }).catch( (error) => {
             alert('No se pudo cargar el producto');
             console.log(error);
@@ -64,9 +66,11 @@ function updateProduct(id) {
     axios.put(`${baseURL}/products/${editingID}`, editedProduct)
         .then( (response) => {
             alert('Se edito correctamente el producto');
+            document.getElementById('edit').reset();
             getProducts();
         }).catch( (error) => {
             alert('No se pudo editar el product');
+            console.log(error);
         });
 }
 

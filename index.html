@@ -10,9 +10,10 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 col-lg-6">
-                <form action="" onsubmit="event.preventDefault(), createProduct()">
+        <div class="row justify-content-around">
+            <div class="col-md-5 col-lg-5 card py-3">
+                <h3>Create Product</h3>
+                <form action="" onsubmit="event.preventDefault(), createProduct()" id="create">
                     <div>
                         <label for="p-name" class="form-label">Name</label>
                         <input type="text" id="p-name" class="form-control">
@@ -25,11 +26,12 @@
                         <label for="img-url" class="form-label">Image URL</label>
                         <input type="text" id="img-url" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-primary mt-3">Create Product</button>
+                    <button type="submit" class="btn btn-success mt-3">Create Product</button>
                 </form>
             </div>
-            <div class="col-md-6 col-lg-6">
-                <form action="" onsubmit="event.preventDefault(), updateProduct()">
+            <div class="col-md-5 col-lg-5 card py-3">
+                <h3>Edit Product</h3>
+                <form action="" onsubmit="event.preventDefault(), updateProduct()" id="edit">
                     <div>
                         <label for="p-name-update" class="form-label">Name</label>
                         <input type="text" id="p-name-update" class="form-control">
